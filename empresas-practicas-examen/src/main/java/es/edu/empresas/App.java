@@ -1,11 +1,14 @@
 package es.edu.empresas;
 
+import es.edu.empresas.dao.ConnectionManager;
 import es.edu.empresas.service.*;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
         int opcion;
+                EmpresaService empresaSrv = new EmpresaService();
+                AlumnoService alumnoSrv = new AlumnoService();
         do {
             System.out.println("\n--- GESTOR DE EMPRESAS Y ALUMNOS ---");
             System.out.println("1. Listar empresas");
@@ -16,7 +19,7 @@ public class App {
             System.out.println("6. Eliminar alumno");
             System.out.println("0. Salir");
             System.out.print("Opción: ");
-            opcion = Integer.parseInt(sc.nextLine());
+            opcion = Integer.parseInt(new Scanner(System.in).nextLine());
             switch (opcion) {
                 case 1 -> empresaSrv.listar();
                 case 2 -> empresaSrv.insertar();

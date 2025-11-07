@@ -5,5 +5,6 @@ CREATE TABLE empresas (
 );
 
 -- TODO: Completar tabla alumnos con los campos:
--- id (PK), nombre, idEmpresa (FK hacia empresas.id), ciclo
+-- id (PK), nombre,
+idEmpresa (FK hacia empresas.id), ciclo
 -- La FK debe incluir: ON DELETE SET NULL
